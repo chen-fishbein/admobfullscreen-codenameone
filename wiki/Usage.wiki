@@ -83,5 +83,5 @@ public class !MyApplication {
 
 *build for iphone* - 
 <br>1)Add the following build hints:
-<br>*ios.add_libs*=!AdSupport.framework,!SystemConfiguration.framework,!CoreTelephony.framework
+<br>*ios.add_libs*=!AdSupport.framework;!SystemConfiguration.framework,!CoreTelephony.framework
 <br>*ios.objC*=true
