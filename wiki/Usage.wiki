@@ -22,7 +22,7 @@ public class !MyApplication {
         <br>if(Display.getInstance().getPlatformName().equals("ios")){
             admobId = "<your iphone adID>";
         }
-        admob = new !AdMobManager(admobId);
+        <br>admob = new !AdMobManager(admobId);
     }
     
     public void start() {
@@ -73,15 +73,15 @@ public class !MyApplication {
 = Details =
 
 <br>1)Build the project
-<br>2)Place the AdmobFullScreen.cn1lib file in your CN1 project lib.
+<br>2)Place the !AdmobFullScreen.cn1lib file in your CN1 project lib.
 <br>3)Right click on your CN1 project and select "Refresh Libs" then clean build your project.
 
 *build for Android* - 
 <br>1)Add the following build hints:
-<br>*android.xapplication*=<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+<br>*android.xapplication*=<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><activity android:name="com.google.android.gms.ads.!AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 <br>*android.includeGPlayServices*=true
 
 *build for iphone* - 
 <br>1)Add the following build hints:
-<br>*ios.add_libs*=AdSupport.framework,SystemConfiguration.framework,CoreTelephony.framework
+<br>*ios.add_libs*=!AdSupport.framework,!SystemConfiguration.framework,!CoreTelephony.framework
 <br>*ios.objC*=true
