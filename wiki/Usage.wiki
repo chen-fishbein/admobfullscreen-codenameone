@@ -19,7 +19,7 @@ public class !MyApplication {
         }
         
         String admobId = "<your android adID>";
-        if(Display.getInstance().getPlatformName().equals("ios")){
+        <br>if(Display.getInstance().getPlatformName().equals("ios")){
             admobId = "<your iphone adID>";
         }
         admob = new !AdMobManager(admobId);
@@ -34,7 +34,7 @@ public class !MyApplication {
         Form f = new Form("!FullScreen Ads");
         f.addComponent(new Button(new Command("start"){
 
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(!ActionEvent evt) {
                 admob.loadAd();
             }
         
