@@ -13,7 +13,7 @@ public class !MyApplication {
     public void init(Object context) {
         try {
             Resources theme = Resources.openLayered("/theme");
-            UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()![0]));
+            UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -22,7 +22,7 @@ public class !MyApplication {
         if(Display.getInstance().getPlatformName().equals("ios")){
             admobId = "<your iphone adID>";
         }
-        admob = new AdMobManager(admobId);
+        admob = new !AdMobManager(admobId);
     }
     
     public void start() {
@@ -31,7 +31,7 @@ public class !MyApplication {
             return;
         }
         
-        Form f = new Form("FullScreen Ads");
+        Form f = new Form("!FullScreen Ads");
         f.addComponent(new Button(new Command("start"){
 
             public void actionPerformed(ActionEvent evt) {
@@ -42,7 +42,7 @@ public class !MyApplication {
         
         f.addComponent(new Button(new Command("show"){
 
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(!ActionEvent evt) {
                 admob.showAdIfLoaded();
             }
         
@@ -50,7 +50,7 @@ public class !MyApplication {
 
         f.addComponent(new Button(new Command("load & show"){
 
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(!ActionEvent evt) {
                 admob.loadAndShow();
             }
         
