@@ -4,7 +4,7 @@
 
 Sample code:
 
-public class MyApplication {
+public class !MyApplication {
 
     private Form current;
 
