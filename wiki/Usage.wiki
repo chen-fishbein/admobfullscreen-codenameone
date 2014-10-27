@@ -8,12 +8,12 @@ public class !MyApplication {
 
     private Form current;
 
-    private AdMobManager admob;
+    private !AdMobManager admob;
     
     public void init(Object context) {
         try {
             Resources theme = Resources.openLayered("/theme");
-            UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
+            !UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
         } catch(IOException e){
             e.printStackTrace();
         }
