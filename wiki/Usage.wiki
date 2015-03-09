@@ -3,7 +3,7 @@
 = Usage =
 
 Sample code:
-
+{{{
 public class !MyApplication {
 
     private Form current;
@@ -68,7 +68,7 @@ public class !MyApplication {
     }
 
 }
-
+}}}
 
 = Details =
 
