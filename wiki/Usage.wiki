@@ -4,11 +4,11 @@
 
 Sample code:
 {{{
-public class !MyApplication {
+public class MyApplication {
 
     private Form current;
 
-    private !AdMobManager admob;
+    private AdMobManager admob;
     
     public void init(Object context) {
         try {
