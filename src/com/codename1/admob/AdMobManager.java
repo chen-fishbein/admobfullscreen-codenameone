@@ -78,4 +78,12 @@ public class AdMobManager {
         });
         admob.showAd();
     }
+     
+    /**
+     * Sets an AdsListener
+     */ 
+     public void setAdsListener(AdsListener l) {
+        Callback.setListener(l);
+    }
+     
 }

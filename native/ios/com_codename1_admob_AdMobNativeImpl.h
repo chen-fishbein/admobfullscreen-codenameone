@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
 
 #import "GADInterstitial.h"
+#import "GADInterstitialDelegate.h"
 
-@interface com_codename1_admob_AdMobNativeImpl : NSObject {
+@interface com_codename1_admob_AdMobNativeImpl : NSObject<GADInterstitialDelegate> {
     // Declare one as an instance variable
     GADInterstitial *interstitial_;
     BOOL loaded;

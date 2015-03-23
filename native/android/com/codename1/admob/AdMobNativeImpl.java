@@ -65,7 +65,42 @@ public class AdMobNativeImpl {
         final CodenameOneActivity activity = (CodenameOneActivity)AndroidNativeUtil.getActivity();
         interstitial = new InterstitialAd(activity);
         interstitial.setAdUnitId(adID);
-        System.err.println("inside AdMobFullPageImpl.startLoadingAd");
+        interstitial.setAdListener(new AdListener() {
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                Callback.onAdClosed();
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                super.onAdFailedToLoad(errorCode);
+                Callback.onAdFailedToLoad(errorCode);
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                super.onAdLeftApplication();
+                Callback.onAdLeftApplication();                
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                Callback.onAdLoaded();                
+            }
+
+            @Override
+            public void onAdOpened() {
+                super.onAdOpened();
+                Callback.onAdOpened();                
+            }
+            
+            
+        
+        });
+        
         try {
             // Create ad request.
             final AdRequest adRequest = new AdRequest.Builder().build();
@@ -74,7 +109,6 @@ public class AdMobNativeImpl {
 
                 public void run() {
                     interstitial.loadAd(adRequest);
-                    System.err.println("start loading ad");
                 }
             });
 
