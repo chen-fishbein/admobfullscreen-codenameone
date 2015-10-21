@@ -11,6 +11,11 @@
     id del = self; 
 
     [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+        if (interstitial_ != nil) {
+#ifndef CN1_USE_ARC            
+            [interstitial_ release];
+#endif
+        }
         interstitial_ = [[GADInterstitial alloc] init];
         interstitial_.adUnitID = adID;
         interstitial_.delegate = del;
@@ -42,6 +47,11 @@
     NSLog(@"inside native startLoadingAd");
     id del = self; 
     [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+        if (interstitial_ != nil) {
+#ifndef CN1_USE_ARC            
+            [interstitial_ release];
+#endif
+        }
         interstitial_ = [[GADInterstitial alloc] init];
         interstitial_.adUnitID = adID;
         interstitial_.delegate = del;
@@ -105,5 +115,11 @@
   com_codename1_admob_Callback_onAdLeftApplication__(CN1_THREAD_GET_STATE_PASS_SINGLE_ARG);  
 }
 
+-(void)dealloc {
+#ifndef CN1_USE_ARC
+    [interstitial_ release];
+    [super dealloc];
+#endif
+}
 
 @end
