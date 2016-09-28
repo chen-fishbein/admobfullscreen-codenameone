@@ -85,7 +85,7 @@ public class MyApplication {
 build for Android - <br/>
 1)Add the following build hints: <br/>
 android.xapplication=\<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />\<activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" /> <br/>
-android.includeGPlayServices=true <br/>
+android.playService.ads=true <br/>
 <br/>
 build for iphone - <br/>
 1)Add the following build hints: <br/>
