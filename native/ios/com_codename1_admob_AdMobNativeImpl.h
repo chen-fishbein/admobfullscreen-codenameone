@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
-#import "GADInterstitial.h"
-#import "GADInterstitialDelegate.h"
+#import <GoogleMobileAds/GADInterstitial.h>
+#import <GoogleMobileAds/GADInterstitialDelegate.h>
 
 @interface com_codename1_admob_AdMobNativeImpl : NSObject<GADInterstitialDelegate> {
     // Declare one as an instance variable
