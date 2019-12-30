@@ -86,5 +86,15 @@ The preferred installation method is to use the Extensions manager in Codename O
 * Place the AdmobFullScreen.cn1lib file in your CN1 project lib. 
 * Right click on your CN1 project and select "Codename One" > "Refresh CN1Libs" then clean build your project.
 
+**Update Dec. 30, 2019**
 
+Android now requires you to add the following snippet to your project's `android.xapplication` build hint
+
+~~~~
+<meta-data
+android:name="com.google.android.gms.ads.APPLICATION_ID"
+android:value="YOUR_ADMOB_APP_ID"/>
+~~~~
+
+Where `YOUR_ADMOB_APP_ID` is replaced with your Admob App ID.  Sample Admob App ID: `ca-app-pub-3940256099942544~3347511713`.
 
