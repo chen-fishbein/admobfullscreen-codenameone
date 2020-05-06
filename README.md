@@ -28,6 +28,11 @@ public class MyApplication {
         if(Display.getInstance().getPlatformName().equals("ios")){
             admobId = "<your iphone adID>";
         }
+        
+        // Note:  admobId is the ID of the target ads you want to display
+        // not your admob App ID.
+        // See instructions for Android and iOS below for specifying admob app ID
+        // via build hints.
         admob = new AdMobManager(admobId);
     }
     
@@ -86,7 +91,7 @@ The preferred installation method is to use the Extensions manager in Codename O
 * Place the AdmobFullScreen.cn1lib file in your CN1 project lib. 
 * Right click on your CN1 project and select "Codename One" > "Refresh CN1Libs" then clean build your project.
 
-**Update Dec. 30, 2019**
+### Android Instructions
 
 Android now requires you to add the following snippet to your project's `android.xapplication` build hint
 
@@ -97,4 +102,14 @@ android:value="YOUR_ADMOB_APP_ID"/>
 ~~~~
 
 Where `YOUR_ADMOB_APP_ID` is replaced with your Admob App ID.  Sample Admob App ID: `ca-app-pub-3940256099942544~3347511713`.
+
+### iOS Instructions
+
+iOS now requires you to specify your admob App ID in the Info.plist file.  You can do this with by adding the following build hint to your project:
+
+~~~~
+ios.plistInject=<key>GADApplicationIdentifier</key><string>YOUR_ADMOB_APP_ID_</string>
+~~~~
+
+Where `YOUR_ADMOB_APP_ID` is replaced with your Admob App ID.  ca-app-pub-XXXXXXXX~XXXXXXXXX
 
